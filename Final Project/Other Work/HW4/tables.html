@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<html>
+
+<head>
+    <title>Trivia Game with Tables</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Luke Rainis">
+
+    <link rel="shortcut icon" href="Images/question_mark.ico">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<style>
+    select {
+        text-align: center;
+        background-color: midnightblue;
+        color: white;
+    }
+    
+    button {
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        background-color: midnightblue;
+        border: 1px solid;
+        border-color: #696 #363 #363 #696;
+    }
+    
+    table {
+        border-radius: 50px;
+        font-family: 'Ubuntu', sans-serif;
+        border-collapse: collapse;
+    }
+    
+    td {
+        width: 5%;
+        text-align: center;
+    }
+    
+    .names {
+        font-weight: bold;
+    }
+    
+    td,
+    th {
+        border: 2px solid #A9A9A9;
+        text-align: center;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<script>
+    function Bruins1() {
+        alert("The Boston Bruins' mascot is what species of animal?");
+    }
+
+    function Bruins_Q(select) {
+        if ((select.options[select.selectedIndex].text) == "Bear")
+            alert("Correct!");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+    function RedSox1() {
+        alert("What year did the Boston Red Sox win their first World Series?");
+    }
+
+    function RedSox_Q(select) {
+        if ((select.options[select.selectedIndex].text) == "1903")
+            alert("Correct! The Red Sox won their first World Series Championship in 1903, defeating the Pittsburgh Pirates.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function Celtics1() {
+        alert("Which Celtics player famously scored 60 points in a single game?");
+    }
+
+    function Celtics2(select) {
+        if ((select.options[select.selectedIndex].text) == "Larry Bird")
+            alert("Correct! On March 12, 1985, Larry Bird scored a Celtics-record 60 points in a game against the Atlanta Hawks.");
+        else if ((select.options[select.selectedIndex].text) == "Jayson Tatum")
+            alert("That's also correct! In recent times, Jayson Tatum also tied Larry Bird's record of 60 points on April 30th, 2021.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function General_1() {
+        alert("Which American president appears on the two dollar bill?")
+    }
+
+    function General_1_ans(select) {
+        if ((select.options[select.selectedIndex].text) == "Thomas Jefferson")
+            alert("Correct! Thomas Jefferson is on the face of the American two dollar bill.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function Patriots_q() {
+        alert("How many years did it take Bill Belichick to win a Super Bowl with the New England Patriots?");
+    }
+
+    function Patriots_ans() {
+        alert("It took head coach Bill Belichick only two years to win a Super Bowl with the New England Patriots. After suffering through a tough first season in which the Patriots finished 5-11, Belichick engineered a masterful second season, handing QB duties over to Tom Brady and leading the Patriots to a victory over the St. Louis Rams in Super Bowl XXXVI. He would follow up with two more Super Bowl victories in the next three years, making him one of the most successful head coaches in league history.");
+    }
+
+    function Patriots_ans(select) {
+        if ((select.options[select.selectedIndex].text) == "2")
+            alert("Correct! It took head coach Bill Belichick only two years to win a Super Bowl with the New England Patriots. After suffering through a tough first season in which the Patriots finished 5-11, Belichick engineered a masterful second season, handing QB duties over to Tom Brady and leading the Patriots to a victory over the St. Louis Rams in Super Bowl XXXVI. He would follow up with two more Super Bowl victories in the next three years, making him one of the most successful head coaches in league history.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+    function www_q() {
+        alert("In a website browser address bar, what does “www” stand for?")
+    }
+
+    function www_a(select) {
+        if ((select.options[select.selectedIndex].text) == "World Wide Web")
+            alert("Correct! 'www' stands for World Wide Web.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function baby_q() {
+        alert("Which bone are babies born without?")
+    }
+
+    function baby_a() {
+        alert("Babies are born without knee caps.")
+    }
+
+    function baby_a(select) {
+        if ((select.options[select.selectedIndex].text) == "Knee Caps")
+            alert("Correct! Babies are born without knee caps.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function fruit_q() {
+        alert("Which fruit floats because 25% of its volume is air?")
+    }
+
+    function fruit_a(select) {
+        if ((select.options[select.selectedIndex].text) == "Apples")
+            alert("Correct! The reason apples float is because 25% of their volume is air.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function hitler_q() {
+        alert("TRUE or FALSE - Adolf Hitler was a German soldier in World War I.")
+    }
+
+    function hitler_a(select) {
+        if ((select.options[select.selectedIndex].text) == "True")
+            alert("Correct. Adolf Hitler was a soldier in the German army during World War I.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function doi_q() {
+        alert("What year was the United States Declaration of Independence signed?")
+    }
+
+    function doi_a(select) {
+        if ((select.options[select.selectedIndex].text) == "1776")
+            alert("Correct! The Declaration of Independence was signed on August 2, 1776 by Congress members, the first one being John Hancock's.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+
+    function berlinwall_q() {
+        alert("In what year did the Berlin Wall fall?")
+    }
+
+    function berlinwall_a() {
+        alert("The Berlin Wall fell in 1989.")
+    }
+
+    function berlinwall_a(select) {
+        if ((select.options[select.selectedIndex].text) == "1989")
+            alert("Correct! The Berlin wall fell in 1989.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+
+    function nyc_q() {
+        alert("What was the original name of New York City?")
+    }
+
+    function nyc_a(select) {
+        if ((select.options[select.selectedIndex].text) == "New Amsterdam")
+            alert("Correct! New York City was originally named 'New Amsterdam', where the English took it over in 1664, renaming it to 'New York City'.");
+        else if ((select.options[select.selectedIndex].text) == "Choose your Answer:")
+            alert("That's not a valid option. Please try again.");
+        else
+            alert("Oops! That's not quite right, please try again.");
+    }
+</script>
+
+<body style="font-family: 'Ubuntu', sans-serif;">
+    <table style="width:90%; border-radius: 50; margin: 10px;">
+
+        <div class="names">
+            <tr>
+                <th colspan="2" ;>Sports</th>
+                <th colspan="2">General Trivia</th>
+                <th colspan="2">History</th>
+            </tr>
+        </div>
+        <trf>
+            <td><button style="background-color: #fcb514; color: black" ; id="sports_col" ; onclick="Bruins1()">Boston Bruins Trivia</button></td>
+            <td><select style="background-color: #fcb514; color: black" ; id="Bruins" onchange="Bruins_Q(this)">
+							<option value="Blank">Choose your Answer:</option>
+							<option value="F1">Cow</option>
+							<option value="T">Bear</option>
+							<option value="F2">Shark</option>
+							<option value="F3">Bald Eagle</option>
+						</select></td>
+
+            <td><button onclick="General_1()">Money</button></td>
+            <td><select id="Money" onchange="General_1_ans(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="T">Thomas Jefferson</option>
+							<option value="F1">George Washington</option>
+							<option value="F2">Harriet Tubman</option>
+							<option value="F3">Andrew Jackson</option>
+						</select></td>
+
+            <td><button style="background-color: #4b5320" ; onclick="hitler_q()">Adolf
+							Hitler</button></td>
+            <td><select style="background-color: #4b5320" ; id="WW1" onchange="hitler_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="T">True</option>
+							<option value="F1">False</option>
+						</select></td>
+
+            </tr>
+            <tr>
+                <td><button style="background-color: red" ; id="sports_col" ; onclick="RedSox1()">Boston Red Sox Trivia</button></td>
+                <td><select style="background-color: red; color: white" ; id="Bruins" onchange="RedSox_Q(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F1">1909</option>
+							<option value="F2">1921</option>
+							<option value="T">1903</option>
+							<option value="F3">1954</option>
+						</select></td>
+
+                <td><button style="background-color: teal;" onclick="www_q()">The Internet</button></td>
+                <td><select style="background-color: teal;" id="www" onchange="www_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="T">World Wide Web</option>
+							<option value="F1">World Wide Website</option>
+							<option value="F2">Winner Winner Winner</option>
+							<option value="F3">Woah Wow What</option>
+						</select></td>
+
+                <td><button style="background-color: #FFFF9E; color: black" ; onclick="doi_q()">Declaration of Independence</button></td>
+                <td><select style="background-color: #FFFF9E; color: black" id="DOI" onchange="doi_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="T">1776</option>
+							<option value="F1">1734</option>
+							<option value="F2">1738</option>
+							<option value="F3">1789</option>
+						</select></td>
+            </tr>
+            <tr>
+                <td><button style="background-color: #007A33" ; id="sports_col" ; onclick="Celtics1()">Boston Celtics Trivia</button></td>
+                <td><select style="background-color: #007A33;" id="celtics" onchange="Celtics2(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="T">Jayson Tatum</option>
+							<option value="T2">Paul Pierce</option>
+							<option value="F1">Larry Bird</option>
+							<option value="F2">John Havlicek</option>
+						</select></td>
+
+                <td><button style="background-color: maroon;" onclick="baby_q()">Babies</button></td>
+                <td><select style="background-color: maroon;" id="baby" onchange="baby_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F1">Ears</option>
+							<option value="F2">Humerus (Funny Bone)</option>
+							<option value="F3">Scapula</option>
+							<option value="T">Knee Caps</option>
+						</select></td>
+
+                <td><button style="background-color: #696969;" onclick="berlinwall_q()">Berlin
+							Wall</button></td>
+                <td><select style="background-color: #696969;" id="Berlin_Wall" onchange="berlinwall_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F1">1976</option>
+							<option value="T">1989</option>
+							<option value="F2">1993</option>
+							<option value="F3">1999</option>
+						</select></td>
+            </tr>
+            <tr>
+                <td><button style="background-color: #002244" ; id="sports_col" ; onclick="Patriots_q()">NE Patriots Trivia</button></td>
+                <td><select style="background-color: #002244;" id="sports_col" onchange="Patriots_ans(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F1">1</option>
+							<option value="T">2</option>
+							<option value="F2">3</option>
+							<option value="F3">5</option>
+						</select></td>
+
+                <td><button style="background-color: #9B5FA0;" onclick="fruit_q()">Fruits</button></td>
+                <td><select style="background-color: #9B5FA0;" id="fruit" onchange="fruit_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F">Peppers</option>
+							<option value="F2">Strawberries</option>
+							<option value="F3">Grapes</option>
+							<option value="T">Apples</option>
+						</select></td>
+
+                <td><button style="background-color: #E14F4F;" onclick="nyc_q()">New York
+							City</button></td>
+                <td><select style="background-color: #E14F4F;" id="nyc" onchange="nyc_a(this)">
+							<option value="Selection">Choose your Answer:</option>
+							<option value="F1">Amsterdam</option>
+							<option value="T">New Amsterdam</option>
+							<option value="F2">New England</option>
+							<option value="F3">Pompeii</option>
+						</select></td>
+            </tr>
+
+    </table>
+</body>

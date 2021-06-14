@@ -1,0 +1,112 @@
+<!-- Academics -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academics</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/9ad1ea138a.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+</head>
+<style>
+    .parallax {
+        /* The image used */
+        background-image: url("Images/cchs3.png");
+        /* Sets specific height of background image */
+        min-height: 800px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+    function showhideMenu() {
+        var x = document.getElementById("hamitems");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+<body>
+    <!-- text under parallax -->
+    <div class="parallax"></div>
+
+    <!-- animated hamburger menu open/close -->
+    <svg class="ham hamRotate ham8" id="hamburger" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active'); showhideMenu()">
+        <path
+          class="line top"
+          d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+        />
+        <path class="line middle" d="m 30,50 h 40" />
+        <path
+          class="line bottom"
+          d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+        />
+      </svg>
+
+    <!-- (C) MENU ITEMS -->
+    <div id="hamitems" style="display: none">
+        <a href="index.html"><i class="fas fa-home"></i> </a>
+        <a href="pageone.html">Hockey</a>
+        <a href="pagetwo.html">School</a>
+        <a href="pagethree.html">Dogs</a>
+        <a href="pagefour.html">Past Work</a>
+    </div>
+
+    <div id="content">
+        <center>
+            <h2>I currently go to school at...</h2>
+            <img src="Images/cchs.jpeg">
+            <h2>Concord-Carlisle High School</h2>
+
+            <br><br><br><br><br><br>
+            <h3>A list of my current classes:</h3>
+            <table>
+                <tr>
+                    <th>Class</th>
+                    <th>Teacher</th>
+                </tr>
+                <tr>
+                    <td>Latin 2</td>
+                    <td>Mrs. Haycock</td>
+                </tr>
+                <tr>
+                    <td>Intro to Computing & Coding</td>
+                    <td>Mr. Beckwith</td>
+                </tr>
+                <tr>
+                    <td>Planet Earth</td>
+                    <td>Mr. Brown</td>
+                </tr>
+                <tr>
+                    <td>Geometry</td>
+                    <td>Mrs. Kiesselbach</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>Mrs. Greeley</td>
+                </tr>
+                <tr>
+                    <td>World Cultures & Civilizations</td>
+                    <td>Mr. Rivera</td>
+                </tr>
+            </table>
+
+            <br><br><br><br>
+            <h4>uhh... school isn't that interesting </h4>
+        </center>
+    </div>
+</body>
+
+</html>

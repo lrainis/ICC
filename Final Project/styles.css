@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Source Sans Pro", sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap);
+    font-weight: bold;
+}
+
+body {
+    background-color: #292929;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 2000px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2em;
+    margin: 50px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    color: white;
+}
+
+table,
+th,
+td {
+    color: white;
+    width: 50%;
+    text-align: center;
+    border: 1px solid white;
+    border-color: white;
+}
+
+button {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+}
+
+
+/* Hamburger menu */
+
+
+/* (C) HIDE HAMBURGER */
+
+#hamitems {
+    display: none;
+    position: absolute;
+    width: 125px;
+    left: 5px;
+    top: 900px;
+}
+
+@media screen {
+    /* what to do on click/actual items */
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        background: transparent;
+        text-align: center;
+        padding: 8px;
+        width: 100%;
+        font-size: 20px;
+        margin: auto;
+        text-decoration: none;
+        color: white;
+        background: #292929;
+        /* border transition */
+        border: 3px solid transparent;
+        transition: all 0.3s;
+    }
+    #hamitems a:hover {
+        border: 3px solid #2ecc71;
+    }
+    /* (B) SHOW HAMBURGER ICON */
+    #hamburger label {
+        color: white;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    /* animated hamburger open/close */
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .hamRotate.active {
+        transform: rotate(45deg);
+    }
+    .hamRotate180.active {
+        transform: rotate(180deg);
+    }
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: white;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+    .ham8 .top {
+        stroke-dasharray: 40 160;
+    }
+    .ham8 .middle {
+        stroke-dasharray: 40 142;
+        transform-origin: 50%;
+        transition: transform 400ms;
+    }
+    .ham8 .bottom {
+        stroke-dasharray: 40 85;
+        transform-origin: 50%;
+        transition: transform 400ms, stroke-dashoffset 400ms;
+    }
+    .ham8.active .top {
+        stroke-dashoffset: -64px;
+    }
+    .ham8.active .middle {
+        stroke-dashoffset: -20px;
+        transform: rotate(90deg);
+    }
+    .ham8.active .bottom {
+        stroke-dashoffset: -64px;
+    }
+}
+
+
+/* IMAGE GALLERY STYLING */
+
+a {
+    text-decoration: none;
+}
+
+div.gallery {
+    margin: 5px;
+    float: right;
+    width: fit-content;
+}
+
+img {
+    padding: 1px;
+    border: 2px solid #ccc;
+}
+
+img:hover {
+    border: 2px solid #4caf50;
+}
+
+div.gallery img {
+    width: auto;
+    height: 400px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}

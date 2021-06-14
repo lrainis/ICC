@@ -1,0 +1,93 @@
+<!-- Hockey -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hockey</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://kit.fontawesome.com/9ad1ea138a.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+</head>
+<script>
+    function showhideMenu() {
+        var x = document.getElementById("hamitems");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<style>
+    .parallax {
+        /* The image used */
+        background-image: url("Images/pondpic.jpeg");
+        /* Sets specific height of background image */
+        min-height: 581px;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+    
+    #hamitems {
+        display: none;
+        position: absolute;
+        width: 125px;
+        left: 5px;
+        top: 670px;
+    }
+</style>
+
+<body>
+    <!-- text under parallax -->
+    <div class="parallax"></div>
+
+    <!-- animated hamburger menu open/close -->
+    <svg class="ham hamRotate ham8" id="hamburger" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active'); showhideMenu()">
+      <path
+        class="line top"
+        d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+      />
+      <path class="line middle" d="m 30,50 h 40" />
+      <path
+        class="line bottom"
+        d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+      />
+    </svg>
+
+    <!-- (C) MENU ITEMS -->
+    <div id="hamitems" style="display: none">
+        <a href="index.html"><i class="fas fa-home"></i> </a>
+        <a href="pageone.html">Hockey</a>
+        <a href="pagetwo.html">School</a>
+        <a href="pagethree.html">Dogs</a>
+        <a href="pagefour.html">Past Work</a>
+    </div>
+
+    <center>
+        <h1>Hockey</h1>
+        <h3>I've been playing hockey since I was six.</h3>
+        <img id="pic" alt="little menace" style="width: 300px; height: 500px;" src="Images/IMG_0936.jpg">
+        <h4>(that's me, the little menace)</h4>
+
+        <br><br><br>
+        <h3>Now... CCHS</h3>
+        <img src="Images/CCHS_Varsity_2020-2021.jpeg" style="margin-bottom: 50px;" ">
+        <br>
+        <img src="Images/IMG_0230.JPG " style="width: auto; height: 75% ">
+        <h4>(me on the far right)</h4>
+    </center>
+
+
+</body>
+
+</html>
